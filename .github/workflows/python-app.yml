@@ -47,12 +47,8 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     
-    - name: Create the artifact
-      run: zip package.zip ./main.py
-    
-    - name: Deliver the artifact
+    - name: Create and deliver the artifact
       uses: actions/upload-artifact@v4
       with:
-        name: package.zip
-        path: package.zip
+        path: ./main.py
         
