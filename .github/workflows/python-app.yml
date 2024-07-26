@@ -50,5 +50,6 @@ jobs:
     - name: Create and deliver the artifact
       uses: actions/upload-artifact@v4
       with:
+        name: main-${GITHUB_REF}
         path: ./main.py
         
